@@ -1,0 +1,10 @@
+<xml>
+    <app name="ocrapi">
+        <model name="OCR_Nodes"></model>
+        <model name="OCR_NodeRequest"></model>
+    </app>
+    <app name="auth">
+        <model name="User"></model>
+        <model name="Group"></model>
+    </app>
+</xml>

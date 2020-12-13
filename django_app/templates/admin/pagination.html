@@ -1,0 +1,33 @@
+{% load admin_list %}
+{% load i18n %}
+<div class="col-md-12 no-padding tbl-footer">
+    <div class="pagination-total-count">
+        Tổng số: {{ cl.result_count }}
+        {% if cl.result_count == 1 %}{{ cl.opts.verbose_name }}{% else %}{{ cl.opts.verbose_name_plural }}{% endif %}
+    </div>
+
+    <div class="pagination-pages">
+        <p>Số mục hiển thị</p>
+        <select name="page_size" class="js-change-page-size form-control">
+            <option value="5" {% if cl.list_per_page == 5 %}selected="selected"{% endif %}>5</option>
+            <option value="10" {% if cl.list_per_page == 10 %}selected="selected"{% endif %}>10</option>
+            <option value="20" {% if cl.list_per_page == 20 %}selected="selected"{% endif %}>20</option>
+            <option value="50" {% if cl.list_per_page == 50 %}selected="selected"{% endif %}>50</option>
+            <option value="100" {% if cl.list_per_page == 100 %}selected="selected"{% endif %}>100</option>
+        </select>
+
+        <ul class="pagination pagination-sm no-margin pull-right">
+            {% if pagination_required %}
+                {% for i in page_range %}
+                    <li>{% paginator_number cl i %}</li>
+                {% endfor %}
+            {% endif %}
+
+            <!--        {% if show_all_url %}&nbsp;&nbsp;<a href="{{ show_all_url }}" class="showall">
+                {% trans 'Show all' %}</a>{% endif %}-->
+            <!--        {% if cl.formset and cl.result_count %}<input type="submit" name="_save" class="default" value="
+                {% trans 'Save' %}">{% endif %}-->
+        </ul>
+    </div>
+</div>
+

@@ -1,0 +1,198 @@
+ 
+
+ 
+
+Hạng mục công việc
+
+ĐVT
+
+Số lượng
+
+Đơn giá
+
+Thành tiên
+(VNĐ)
+
+ 
+
+74,9
+
+Giá thị trường hàng hóa, dịch vụ cần thiết khác
+phục vụ công tác dự báº và quản lý nhà nước
+về gid.
+
+ 
+
+Li
+
+Gia trị tài san được thẩm định gia (dat dai,
+nha, công trình xây dựng, máy, thiết bi,
+phương tiện vận tải, dây chuyển công nghệ,
+...); Thông tin giá cả, tài liệu liên quan đến kết
+quả thẩm định giá của Hội đồng thẩm định giá
+tài san. Hội đồng thẩm đỉnh aid đất
+
+ 
+
+Xây dựng chức năng nhập thông tin giá trị
+tài sản thẩm định giá chº Dºanh nghiệp
+thẩm định giá trên dia bàn tinh,
+
+ 
+
+ 
+
+Triển khai thu thập thông tin giá cả thị
+trường; thông tin đăng ký giá, kê khai giá;
+kết quả thẩm định giá nhà nước khi mua
+sắm tài sản, chº các phòng Tài chính — Kế
+hoach các huyện, thành phố, các sở
+
+ 
+
+ 
+
+ngàn khai nộp hồ sơ đăng ky, kê khai giá
+trực tuyến cho các tổ chức dang ky, kê
+khai giá tại Sở Tài chính, có thể thực hiện
+trao đổi thông tin trực tuyến về hồ sơ
+đăng ký, kê khai giá giữa tổ chức và cán
+bô Sở Tai chính.
+
+ 
+
+Quản lý văn bản nhà nước về giá; Khai
+thác báº cáº tổng hợp
+
+\`*`$ 2 ej
+
+ 
+
+Cac quyét dinh, van ban quan ly, diéu hanh vé
+gia.
+
+ 
+
+Cac van ban hướng dan, tham gia, góp ý với
+các don vi khác có liên quan đến cơ chế chính
+sách về giá.
+
+ 
+
+Bao cao tình hình giá cả thi trường.
+
+ 
+
+Các báº cáº, tài liệu học tập kinh nghiệm.
+
+ 
+
+Kết quả, đề tài nghiên cứu khºa học.
+
+ 
+
+Các báº cáº, văn bản có liên quan khác.
+
+ 
+
+Biểu đồ tổng hợp biến động giá hàng hóa, dịch
+vụ kê khai giá.
+
+ 
+
+Biểu đồ tổng hợp biến động giá hàng hóa, dịch
+vụ giá thị trường.
+
+ 
+
+Bang giá hàng hóa, dịch vu do UBND tinh/tp
+định giá.
+
+ 
+
+Bang giá hang hóa, dich vụ do UBND tinh/tp
+định giá theo dia ban, khu vực ap dung.
+
+ 
+
+a
+K,
+
+Bang giá hàng hóa, dịch vu do UBND tinh/tp
+định giá theº lºại giá.
+
+ 
+
+Nà
+k.
+
+Bảng tổng hợp mức giá kê khai.
+
+ 
+
+“
+he
+
+Bang giá kê khai tổng hợp theo đơn vi kê khai.
+
+ 
+
+a
+k.
+
+Bảng giá kê khai tổng hợp theº nhóm hàng
+hóa, dịch vu.
+
+ 
+
+Bảng giá kê khai tổng hợp theº lºại giá.
+
+ 
+
+Bang giá thị trường.
+
+ 
+
+Bảng giá thị trường tổng hợp theº địa bàn.
+
+ 
+
+SIS
+NINN
+
+Bang giá thị trường tổng hợp theo loai giá.
+
+ 
+
+n
+hạ
+
+Bảng tổng hợp giá trúng thầu của hàng hóa,
+dịch vụ.
+
+ 
+
+ 
+
+a
+
+Cac thông tin phục vu công tác quan lý
+
+ 
+
+nhà nước về giá
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Trang 4/5
+

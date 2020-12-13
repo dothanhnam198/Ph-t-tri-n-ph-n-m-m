@@ -1,0 +1,9 @@
+@import "variables";
+
+.main-footer {
+  position: relative;
+  margin-left: 0;
+  background: $footer_bg_color !important;
+  text-align: center;
+  color: $footer_text_color;
+}

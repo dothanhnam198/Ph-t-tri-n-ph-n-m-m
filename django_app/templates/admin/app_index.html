@@ -1,0 +1,13 @@
+{% extends "admin/index.html" %}
+{% load i18n %}
+
+{% if not is_popup %}
+{% block breadcrumbs %}
+<ol class="breadcrumb">
+    <li><a href="{% url 'admin:index' %}"><i class="fa fa-dashboard"></i> {% trans 'Home' %}</a></li>
+    {% for app in app_list %}
+    <li class="active">{{ app.name }}</li>
+    {% endfor %}
+</ol>
+{% endblock %}
+{% endif %}

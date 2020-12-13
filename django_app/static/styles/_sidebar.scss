@@ -1,0 +1,63 @@
+@import "variables";
+
+aside.main-sidebar {
+  background-color: $left_sidebar_bg_color !important;
+  padding-top: 84px;
+}
+
+ul.sidebar-menu li.treeview a span {
+    white-space: normal;
+}
+
+.sidebar-menu > li {
+  border-bottom: solid 1px #ddd;
+}
+
+.sidebar-menu > li > a {
+  padding-left: 5px;
+}
+
+.sidebar-menu > li > a > i {
+  color: $left_sidebar_link_icon_color;
+  font-size: $left_sidebar_link_icon_fsize;
+  margin-right: 5px;
+}
+
+.sidebar-menu > li > a > span {
+  color: $left_sidebar_link_color;
+  font-weight: bold;
+  font-size: $left_sidebar_link_fsize;
+}
+
+.sidebar-menu > li.treeview:hover > a, .sidebar-menu > li.menu-open > a {
+  background-color: $left_sidebar_link_hover_bg_color !important;
+}
+
+.sidebar-menu > li.menu-open > a > span {
+  color: $left_sidebar_link_hover_color;
+}
+
+.sidebar-menu > li.treeview:hover > a > span {
+  color: $left_sidebar_link_hover_color;
+}
+
+.sidebar-menu > li > .treeview-menu {
+  background-color: $left_sidebar_submenu_bg_color !important;
+}
+
+.sidebar-menu > li > .treeview-menu > li > a {
+  padding-left: 5px;
+  color: $left_sidebar_submenu_link_color !important;
+  font-size: $left_sidebar_submenu_link_fsize;
+}
+
+.sidebar-menu > li > .treeview-menu > li > a:hover {
+  background-color: $left_sidebar_link_hover_bg_color !important;
+  color: $left_sidebar_link_hover_color !important;
+  font-weight: bold;
+}
+
+
+
+
+

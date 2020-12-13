@@ -1,0 +1,36 @@
+@import "variables";
+
+.navbar {
+  margin-left: 0 !important;
+  display: flex;
+  padding: 5px;
+}
+
+.logo-container {
+  display: block;
+  padding-left: 20px;
+  .main-logo {
+    width: $main_logo_width;
+  }
+  .brand-name {
+    font-size: $brand_name_fsize;
+    color: $brand_name_color;
+  }
+}
+
+.sidebar-toggle-container {
+  display: flex;
+  align-items: center;
+  .sidebar-toggle {
+
+  }
+  .sidebar-toggle:hover {
+    background-color: transparent !important;
+  }
+}
+
+.navbar-custom-menu {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
