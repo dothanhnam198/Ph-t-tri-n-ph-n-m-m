@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>OCR With Django to Parallel Master</title>
+          <!-- Bootstrap -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" href="{% static 'css/ocr_form.css' %}"/>
+    </head>
+    <body>
+        <h1>&nbsp;&nbsp;&nbsp;EPS OCR to Parallel Master</h1>
+
+        <div class="vertical-center">
+            <div class="form-container">
+              <div class="input-container">
+                <div class="form-group">
+                  <label for="select-lang">Language: </label>
+                  <select id="select-lang" data-js-lang-input>
+                      <option value="vie" selected>Vietnamese</option>
+                      <option value="eng">English</option>
+                  </select>
+                </div>
+                <div class="form-group hide">
+                  <label for="select-spell">Spelling: </label>
+                  <select id="select-spell" data-js-spell-input>
+                      <option value="1" selected>Default</option>
+                      <option value="2">xx</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="select-psm">Page Segmentation Mode: </label>
+                  <select id="select-psm" data-js-psm-input>
+                      <!--<option value="0">Orientation and script detection only</option>-->
+                      <option value="1" selected>Automatic page segmentation with orientation and script detection. (OSD)</option>
+                      <!--<option value="2">AUTO_ONLY Automatic page segmentation, but no OSD, or OCR</option>-->
+                      <option value="3">Fully automatic page segmentation, but no OSD. (default mode for tesserocr)</option>
+                      <option value="4">Assume a single column of text of variable sizes</option>
+                      <option value="5">Assume a single uniform block of vertically aligned text</option>
+                      <option value="6">Assume a single uniform block of text</option>
+                      <option value="7">Treat the image as a single text line</option>
+                      <option value="8">Treat the image as a single word</option>
+                      <option value="9">Treat the image as a single word in a circle</option>
+                      <option value="10">Treat the image as a single character</option>
+                      <option value="11">Find as much text as possible in no particular order</option>
+                      <option value="12">Sparse text with orientation and script detection</option>
+                      <option value="13">Treat the image as a single text line, bypassing hacks that are Tesseract-specific</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="select-oem">Engine Mode: </label>
+                  <select id="select-oem" data-js-oem-input>
+                      <!--<option value="0">Legacy engine only</option>-->
+                      <option value="1" selected>Neural nets LSTM engine only</option>
+                      <!--<option value="2">Legacy + LSTM engines</option>-->
+                      <option value="3">Default, base on what is available</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-container">
+                <div class="form-group">
+                  <label>Preprocessing image: </label>
+                    <input type="checkbox" id="check-deskew" data-js-check-deskew-input checked> <label for="check-deskew"> deskew</label>
+                    <input type="checkbox" id="check-remove-background" data-js-check-remove-background-input checked> <label for="check-remove-background"> remove background</label>
+                    <input type="checkbox" id="check-clean" data-js-check-clean-input> <label for="check-clean"> clean</label>
+                    <input type="checkbox" id="check-clean-final" data-js-check-clean-final-input> <label for="check-clean-final"> clean final</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <div class="form-group">
+                  <label for="select-template">Config template (custom jQuery.selectareas): </label>
+                  <div id="select-template" data-js-template-input>
+                  </div>
+                </div>
+              </div>
+              <div class="input-container input-file-container ">
+                <div class="form-group">
+                  <button class="btn btn-default" type="button" data-js-add-button>Add file</button>
+                  <button class="btn btn-default hide" type="button" data-js-upload-button>Upload file</button>
+                </div>
+                <div class="form-group">
+                  <label for="image">Chose an image/PDF...</label>
+                  <input type="file" id="image-input" data-js-image-input title="" data-toggle="tooltip" data-placement="top" />
+                </div>
+                <div class="form-group">
+                  <label for="image">Chose an image/PDF...</label>
+                  <input type="file" id="image-input" data-js-image-input title="" data-toggle="tooltip" data-placement="top" />
+                </div>
+              </div>
+
+              <div class="input-containerx input-file-containerx hide">
+                <div class="form-group">
+                  <button class="btn btn-default" type="button" data-js-add-button>Add file</button>
+                </div>
+                <div>
+                    <div class="form-group">
+                      <label>File input</label>
+                      <input type="input" id="input-callback" data-js-file-input-input placeholder="Input" value="v.jpg">
+                    </div>
+                    <div class="form-group">
+                      <label>File output</label>
+                      <input type="input" id="input-callback" data-js-file-output-input placeholder="Output" value="o.pdf">
+                    </div>
+                </div>
+              </div>
+              <div class="input-container">
+                <div class="form-group">
+                  <label>FTP (read from api): </label>
+                    <input type="input" id="input-callback" data-js-ftp-ip-input placeholder="FTP IP" value="">
+                    <input type="input" id="input-callback" data-js-ftp-port-input placeholder="Port" value="">
+                    <input type="input" id="input-callback" data-js-ftp-user-input placeholder="Username" value="">
+                    <input type="input" id="input-callback" data-js-ftp-pwd-input placeholder="Password" value="">
+                    <input type="input" id="input-callback" data-js-ftp-folder-input placeholder="Folder" value="">
+                    <input type="input" id="input-callback" data-js-temp-folder-input placeholder="Folder" value="" class="hide">
+                </div>
+              </div>
+              <div class="input-container">
+                <div class="form-group">
+                  <label>OCR Page numbers (empty = all, page start from 0,1,2,3): </label>
+                    <input type="input" id="input-pages" data-js-page-input value="">
+                </div>
+              </div>
+              <div class="input-container">
+                <div class="form-group">
+                  <label>Output type of result: </label>
+                    <input type="checkbox" id="check-out-pdf" data-js-check-out-pdf-input checked> <label for="check-out-pdf"> PDF</label>
+                    <input type="checkbox" id="check-out-text" data-js-check-out-text-input checked> <label for="check-out-text"> Text</label>
+                    <input type="checkbox" id="check-out-page" data-js-check-out-page-input checked> <label for="check-out-page"> Page datas</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <div class="form-group">
+                  <label>Output result POST API callback: </label>
+                    <input type="input" id="input-callback" data-js-api-callback-input>
+                </div>
+              </div>
+              <div class="button-container"><button class="btn btn-default" type="button" data-js-go-button>Go!</button></div>
+              <div class="image-result-container">
+                  <div class="image-container" data-js-image-container></img></div>
+                  <div class="result-container result-default" data-js-result-container>&nbsp;</div>
+              </div>
+            </div>
+        </div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="http://jcrop-cdn.tapmodo.com/v0.9.12/js/jquery.Jcrop.min.js"></script>
+
+        <link href="https://www.jqueryscript.net/demo/jQuery-Plugin-For-Selecting-Multiple-Areas-of-An-Image-Select-Areas/resources/jquery.selectareas.css" media="screen" rel="stylesheet" type="text/css">
+        <script src="{% static 'js/jquery.selectareas.js' %}" type="text/javascript"></script>
+
+        <script src="{% static 'js/fitty.js' %}"></script>
+
+        <script src="{% static 'js/ocr_form.js' %}"></script>
+        <div class="loading">Processing OCR</div>
+    </body>
+</html>
