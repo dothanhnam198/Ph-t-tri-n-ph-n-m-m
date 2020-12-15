@@ -17,5 +17,6 @@ II. Triển khai:
       + Tài khoản, mật khẩu  ftp để kết nối
 2. Các Node con
   - Chạy hệ thống: 
+  + Lưu ý: chạy dưới quyền admin( Run as administrator) lỗi gặp k load được thư viện tessaract ocr trên window
   + python manage.py runserver. Mặc định sẽ là 127.0.0.1:8000 cổng 8000
   + python manage.py runserver address:port để custom .
