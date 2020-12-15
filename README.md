@@ -11,6 +11,10 @@ I. Tính năng hệ thống:
   - Xuất kết quả nhận dạng ra file text, ảnh png , json tương ứng với ảnh, văn bản nhận được.
 
 II. Triển khai:
+1. Cài đặt thư viện:
+  - Hệ thống sử dụng ngôn ngữ python: 
+    + Dowload tại https://www.python.org/downloads/
+    + Settings environnment đến PATH (thư mục python sau khi cài đặt) 
 1. Hệ thống chính(Master) nhận ảnh, quản lý các node.
   - Chạy hệ thống cấu hình các thành phần, vai trò của máy:
       + Địa chỉ
