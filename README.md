@@ -14,12 +14,15 @@ II. Triển khai:
 1. Cài đặt thư viện:
   - Hệ thống sử dụng ngôn ngữ python: 
     + Dowload tại https://www.python.org/downloads/
-    + Settings environnment đến PATH (thư mục python sau khi cài đặt) 
-1. Hệ thống chính(Master) nhận ảnh, quản lý các node.
+    + Settings environnment PATH (thư mục chứa python sau khi cài đặt).
+    + Các thư viện cần sử dụng trong requirements.txt
+    + Cài đặt qua lệnh : pip -r install path/requirements.txt 
+
+2. Hệ thống chính(Master) nhận ảnh, quản lý các node.
   - Chạy hệ thống cấu hình các thành phần, vai trò của máy:
       + Địa chỉ
       + Tài khoản, mật khẩu  ftp để kết nối
-2. Các Node con
+3. Các Node con
   - Chạy hệ thống: 
   + Lưu ý: chạy dưới quyền admin( Run as administrator) lỗi gặp k load được thư viện tessaract ocr trên window
   + python manage.py runserver. Mặc định sẽ là 127.0.0.1:8000 cổng 8000
