@@ -3,6 +3,7 @@ Project bộ môn phát triển phần mềm
 
 - Đề tài: Nhận diện đối tượng trong ảnh
 - Thành viên nhóm: Đỗ Thành Nam, Nguyễn Minh Đức, Nguyễn Quốc Khoa
+
 I. Tính năng hệ thống:
   - Upload ảnh, file pdf 
   - Chia trang cho các node con xử lý
