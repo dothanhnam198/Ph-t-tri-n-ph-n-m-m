@@ -11,8 +11,8 @@ I. Tính năng hệ thống:
   - Xuất kết quả nhận dạng ra file text, ảnh png , json tương ứng với ảnh, văn bản nhận được.
 
 II. Triển khai:
+  Hệ thống triển khai trong môi trường python trên hệ điều hành Window
 1. Cài đặt thư viện:
-  - Hệ thống sử dụng ngôn ngữ python: 
     + Dowload tại https://www.python.org/downloads/
     + Settings environnment PATH (thư mục chứa python sau khi cài đặt).
     + Các thư viện cần sử dụng trong requirements.txt
