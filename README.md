@@ -9,6 +9,7 @@ I. Tính năng hệ thống:
   - Chia trang cho các node con xử lý
   - Các Node con nhận file và xử lý nhận dạng văn bản
   - Xuất kết quả nhận dạng ra file text, ảnh png , json tương ứng với ảnh, văn bản nhận được.
+
 II. Triển khai:
 1. Hệ thống chính(Master) nhận ảnh, quản lý các node.
   - Chạy hệ thống cấu hình các thành phần, vai trò của máy:
